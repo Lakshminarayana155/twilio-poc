@@ -1,0 +1,18 @@
+{% extends 'basics.html' %}
+
+{% block title %}
+Call
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-4">
+    <form action='call' method='POST'>
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number with country code">
+        </div>
+        <button type="submit" class="btn btn-primary">CALL</button>
+    </form>
+</div>
+{% endblock body %}
